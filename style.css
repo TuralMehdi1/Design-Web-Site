@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(rm.jpg) ,linear-gradient(rgb(0, 0, 0),rgba(0,0,0, .74));
+    background-size: cover;
+    background-position: center;
+    opacity: .9;
+   
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    font-size: 30px;
+    color: #fff;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    background: #34e6d4;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: .5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{left: 50%;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(13, 78, 67, 0.603);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    margin-bottom: 10px;
+}
+
+.content p{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+button{
+    font-size: 14px;
+    padding: 5px;
+    margin:0  5px;
+    outline: 0;
+    border: .5px solid rgba(255, 255, 255, 0.514);
+    border-radius: 8px;
+    background: transparent;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #08443e;
+    height: 100%;
+    width: 0;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
